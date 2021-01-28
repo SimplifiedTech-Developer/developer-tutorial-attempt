@@ -1,18 +1,22 @@
-.dojoxRangeSlider .dijitSliderLeftBumperH, .dojoxRangeSlider .dijitSliderBottomBumperV  {
-    background:#FFFFFF !important;
+.dojoxRangeSlider .dijitSliderLeftBumperH, .dojoxRangeSlider .dijitSliderBottomBumperV {
+    background: #FFFFFF !important;
 }
+
 .dojoxRangeSliderBarContainer {
-    position:relative;
+    position: relative;
 }
+
 .dojoxRangeSlider .dijitSliderProgressBarV {
-    position:relative !important;
+    position: relative !important;
 }
+
 .dojoxRangeSlider .dijitSliderProgressBar {
-    overflow:hidden;
-    cursor:pointer;
-    
+    overflow: hidden;
+    cursor: pointer;
+
 }
+
 .dojoxRangeSlider .dijitSliderProgressBarV {
-    position:absolute !important;
+    position: absolute !important;
     border-width: 0px;
 }

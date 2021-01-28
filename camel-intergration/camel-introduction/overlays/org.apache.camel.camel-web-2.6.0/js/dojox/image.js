@@ -5,8 +5,8 @@
 */
 
 
-if(!dojo._hasResource["dojox.image"]){
-dojo._hasResource["dojox.image"]=true;
-dojo.provide("dojox.image");
-dojo.require("dojox.image._base");
+if (!dojo._hasResource["dojox.image"]) {
+    dojo._hasResource["dojox.image"] = true;
+    dojo.provide("dojox.image");
+    dojo.require("dojox.image._base");
 }

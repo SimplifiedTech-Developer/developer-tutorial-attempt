@@ -1,5 +1,5 @@
 package com.bharath.junit5;
 
 public interface Greeting {
-	String greet(String name);
+    String greet(String name);
 }

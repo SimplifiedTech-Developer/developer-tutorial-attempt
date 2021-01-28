@@ -5,9 +5,9 @@
 */
 
 
-if(!dojo._hasResource["dojox.grid.Grid"]){
-dojo._hasResource["dojox.grid.Grid"]=true;
-dojo.provide("dojox.grid.Grid");
-dojo.require("dojox.grid.compat.Grid");
-dojo.deprecated("dojox.grid.Grid");
+if (!dojo._hasResource["dojox.grid.Grid"]) {
+    dojo._hasResource["dojox.grid.Grid"] = true;
+    dojo.provide("dojox.grid.Grid");
+    dojo.require("dojox.grid.compat.Grid");
+    dojo.deprecated("dojox.grid.Grid");
 }

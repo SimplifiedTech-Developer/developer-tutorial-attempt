@@ -29,29 +29,29 @@
 dojo.provide("th.borders");
 
 dojo.declare("th.borders.SimpleBorder", th.Border, {
-    getInsets: function() {
-        return { left: 1, right: 1, top: 1, bottom: 1 };
+    getInsets: function () {
+        return {left: 1, right: 1, top: 1, bottom: 1};
     },
 
-    paint: function(ctx) {
+    paint: function (ctx) {
         var b = this.component.bounds;
         ctx.strokeStyle = this.style.color;
         ctx.strokeRect(0, 0, b.width, b.height);
     }
-}); 
+});
 
 dojo.declare("th.borders.EmptyBorder", th.Border, {
-    constructor: function(parms) {
+    constructor: function (parms) {
         if (!parms) parms = {};
-        
+
         if (parms.size) {
-            this.insets = { left: parms.size, right: parms.size, top: parms.size, bottom: parms.size };
+            this.insets = {left: parms.size, right: parms.size, top: parms.size, bottom: parms.size};
         } else {
             this.insets = parms.insets;
         }
     },
 
-    getInsets: function() {
+    getInsets: function () {
         return this.insets;
     }
 });

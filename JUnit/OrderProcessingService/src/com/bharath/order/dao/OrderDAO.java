@@ -6,12 +6,12 @@ import com.bharath.order.dto.Order;
 
 public interface OrderDAO {
 
-	int create(Order order) throws SQLException;
+    int create(Order order) throws SQLException;
 
-	Order read(int id) throws SQLException;
+    Order read(int id) throws SQLException;
 
-	int update(Order order) throws SQLException;
+    int update(Order order) throws SQLException;
 
-	int delete(int id) throws SQLException;
+    int delete(int id) throws SQLException;
 
 }

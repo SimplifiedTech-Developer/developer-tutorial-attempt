@@ -5,9 +5,9 @@
 */
 
 
-if(!dojo._hasResource["dojox.dtl.render.html"]){
-dojo._hasResource["dojox.dtl.render.html"]=true;
-dojo.provide("dojox.dtl.render.html");
-dojo.require("dojox.dtl.render.dom");
-dojox.dtl.render.html.Render=dojox.dtl.render.dom.Render;
+if (!dojo._hasResource["dojox.dtl.render.html"]) {
+    dojo._hasResource["dojox.dtl.render.html"] = true;
+    dojo.provide("dojox.dtl.render.html");
+    dojo.require("dojox.dtl.render.dom");
+    dojox.dtl.render.html.Render = dojox.dtl.render.dom.Render;
 }

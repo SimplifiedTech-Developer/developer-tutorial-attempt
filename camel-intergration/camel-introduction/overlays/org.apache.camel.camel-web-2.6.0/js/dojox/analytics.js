@@ -5,8 +5,8 @@
 */
 
 
-if(!dojo._hasResource["dojox.analytics"]){
-dojo._hasResource["dojox.analytics"]=true;
-dojo.provide("dojox.analytics");
-dojo.require("dojox.analytics._base");
+if (!dojo._hasResource["dojox.analytics"]) {
+    dojo._hasResource["dojox.analytics"] = true;
+    dojo.provide("dojox.analytics");
+    dojo.require("dojox.analytics._base");
 }

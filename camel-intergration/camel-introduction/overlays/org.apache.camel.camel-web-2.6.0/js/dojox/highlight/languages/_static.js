@@ -5,9 +5,9 @@
 */
 
 
-if(!dojo._hasResource["dojox.highlight.languages._static"]){
-dojo._hasResource["dojox.highlight.languages._static"]=true;
-dojo.provide("dojox.highlight.languages._static");
-dojo.require("dojox.highlight.languages.cpp");
-dojo.require("dojox.highlight.languages.delphi");
+if (!dojo._hasResource["dojox.highlight.languages._static"]) {
+    dojo._hasResource["dojox.highlight.languages._static"] = true;
+    dojo.provide("dojox.highlight.languages._static");
+    dojo.require("dojox.highlight.languages.cpp");
+    dojo.require("dojox.highlight.languages.delphi");
 }

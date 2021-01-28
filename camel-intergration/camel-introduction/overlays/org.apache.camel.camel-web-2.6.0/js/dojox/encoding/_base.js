@@ -5,7 +5,7 @@
 */
 
 
-if(!dojo._hasResource["dojox.encoding._base"]){
-dojo._hasResource["dojox.encoding._base"]=true;
-dojo.provide("dojox.encoding._base");
+if (!dojo._hasResource["dojox.encoding._base"]) {
+    dojo._hasResource["dojox.encoding._base"] = true;
+    dojo.provide("dojox.encoding._base");
 }

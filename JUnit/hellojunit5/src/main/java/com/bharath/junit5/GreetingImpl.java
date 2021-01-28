@@ -2,14 +2,14 @@ package com.bharath.junit5;
 
 public class GreetingImpl implements Greeting {
 
-	@Override
-	public String greet(String name) {
+    @Override
+    public String greet(String name) {
 
-		if (name == null || name.length() == 0) {
-			throw new IllegalArgumentException();
-		}
+        if (name == null || name.length() == 0) {
+            throw new IllegalArgumentException();
+        }
 
-		return "Hello " + name;
-	}
+        return "Hello " + name;
+    }
 
 }

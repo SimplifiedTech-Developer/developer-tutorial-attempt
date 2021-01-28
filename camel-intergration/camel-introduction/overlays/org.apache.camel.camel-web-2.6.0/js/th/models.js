@@ -35,16 +35,16 @@ dojo.declare("th.models.LazyTreeModel", null, {
 
     root: this.placeholder,
 
-    getRoot: function() {
+    getRoot: function () {
         return this.root;
     },
 
-    getChildren: function(parent) {
+    getChildren: function (parent) {
     },
 
-    loadChildren: function(parent) {
+    loadChildren: function (parent) {
     },
 
-    childrenLoaded: function(parent, children) {        
+    childrenLoaded: function (parent, children) {
     }
 });

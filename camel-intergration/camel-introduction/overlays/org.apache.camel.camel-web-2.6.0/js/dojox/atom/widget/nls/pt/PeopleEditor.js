@@ -1,1 +1,1 @@
-({"add":"Incluir","addAuthor":"Incluir Autor","addContributor":"Incluir Contribuidor"})
+({"add": "Incluir", "addAuthor": "Incluir Autor", "addContributor": "Incluir Contribuidor"})

@@ -2,19 +2,19 @@ package com.bharath.mockito.scrapbook;
 
 public class A {
 
-	private B b;
+    private B b;
 
-	public A(B b) {
-		this.b = b;
-	}
+    public A(B b) {
+        this.b = b;
+    }
 
-	public int usesVoidMethod() {
-		try {
-			b.voidmethod();
-		} catch (Exception e) {
-			throw new RuntimeException();
-		}
+    public int usesVoidMethod() {
+        try {
+            b.voidmethod();
+        } catch (Exception e) {
+            throw new RuntimeException();
+        }
 
-		return 1;
-	}
+        return 1;
+    }
 }
