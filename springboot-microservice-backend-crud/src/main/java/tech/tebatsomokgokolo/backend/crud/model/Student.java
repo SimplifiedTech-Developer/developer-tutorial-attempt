@@ -17,7 +17,7 @@ import javax.validation.constraints.NotBlank;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @NotBlank(message = "Name is mandatory")
     @Column(name = "name")

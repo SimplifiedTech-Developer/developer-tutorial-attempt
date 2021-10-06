@@ -25,6 +25,7 @@ public class StudentController {
 
     @GetMapping("signup")
     public String showSignUpForm(Student student) {
+
         return PageNameEnum.ADD_STUDENT.getValue();
     }
 
@@ -36,7 +37,7 @@ public class StudentController {
     }
 
     @PostMapping("add")
-    public String addStudent(@Valid Student student, BindingResult result, Model model) {
+    public String showAddStudentForm(@Valid Student student, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return PageNameEnum.ADD_STUDENT.getValue();
         }

@@ -1,12 +1,12 @@
 package tech.tebatsomokgokolo.backend.crud.repo;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import tech.tebatsomokgokolo.backend.crud.model.Student;
+
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
-import tech.tebatsomokgokolo.backend.crud.model.*;
-
 @Repository
-public interface StudentRepository extends CrudRepository<Student, Long> {
+public interface StudentRepository extends JpaRepository<Student, Long> {
     List<Student> findByName(String name);
 }

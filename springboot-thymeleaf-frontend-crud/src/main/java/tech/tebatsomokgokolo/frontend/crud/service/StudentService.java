@@ -33,31 +33,28 @@ public class StudentService {
         return students;
     }
 
-    public String addStudent(Student student) {
+    public void addStudent(Student student) {
         log.info("Started Adding Student : {}", new Gson().toJson(student));
         ResponseEntity<String> responseEntity = restTemplate.postForEntity(studentUrl, student, String.class);
         log.info("Completed Adding Student : {} ", responseEntity.getBody());
-        return responseEntity.getBody();
     }
 
-    public String updateStudent(long id, Student student) {
+    public void updateStudent(long id, Student student) {
         log.info("Started Updating Student : {}", new Gson().toJson(student));
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
         HttpEntity<Student> entity = new HttpEntity<>(student, headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(studentUrl.concat(String.valueOf(id)), HttpMethod.PUT, entity, String.class);
         log.info("Completed Updating Student : {} ", responseEntity.getBody());
-        return responseEntity.getBody();
     }
 
-    public String deleteStudent(long id) {
+    public void deleteStudent(long id) {
         log.info("Started Deleting Student : {}", id);
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
         ResponseEntity<String> responseEntity = restTemplate.exchange(studentUrl.concat(String.valueOf(id)), HttpMethod.DELETE, entity, String.class);
         log.info("Completed Deleting Student : {} ", responseEntity.getBody());
-        return responseEntity.getBody();
     }
 
     public Student getStudentById(long id) {
@@ -65,6 +62,5 @@ public class StudentService {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(studentUrl.concat(String.valueOf(id)), String.class);
         log.info("Completed Getting Student By Id : {}", id);
         return new Gson().fromJson(responseEntity.getBody(), Student.class);
-
     }
 }

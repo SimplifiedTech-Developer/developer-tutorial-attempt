@@ -8,9 +8,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import tech.tebatsomokgokolo.backend.crud.dto.response.*;
-import tech.tebatsomokgokolo.backend.crud.model.Student;
-import tech.tebatsomokgokolo.backend.crud.service.StudentService;
 import tech.tebatsomokgokolo.backend.crud.enums.*;
+import tech.tebatsomokgokolo.backend.crud.model.Student;
+import tech.tebatsomokgokolo.backend.crud.service.*;
+
 import javax.validation.Valid;
 import java.util.Objects;
 
@@ -77,7 +78,7 @@ public class StudentController {
 
     @PutMapping(value = "{id}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
-    ResponseEntity<Object> put(@PathVariable("id") long id,@Valid @RequestBody Student student) {
+    ResponseEntity<Object> put(@PathVariable("id") long id, @Valid @RequestBody Student student) {
 
         try {
             log.info("Started Updating Student {}", new Gson().toJson(student));
