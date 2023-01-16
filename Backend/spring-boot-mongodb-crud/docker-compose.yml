@@ -1,0 +1,66 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: on-failure
+    hostname: localhost
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      spring_boot_mongo_db_network:
+        aliases:
+          - mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pass12345
+    healthcheck:
+     test: echo 'db.runCommand("ping").ok' | mongo 10.10.10.60:27017/test --quiet
+     interval: 30s
+     timeout: 10s
+     retries: 3
+
+  mongo-express:
+    image: mongo-express
+    restart: on-failure
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: pass12345
+      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: 1
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+    networks:
+      spring_boot_mongo_db_network:
+        aliases:
+          - mongo-express
+    healthcheck:
+      test: wget --quiet --tries=3 --spider http://admin:admin123@10.10.10.60:8081 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  mongo-db-crud-micro-service:
+    build: .
+    container_name: mongo-db-crud-micro-service
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    networks:
+      spring_boot_mongo_db_network:
+        aliases:
+          - mongo-db-crud-micro-service
+
+volumes:
+  mongodb_data:
+
+networks:
+  spring_boot_mongo_db_network:
+    ipam:
+      driver: default
