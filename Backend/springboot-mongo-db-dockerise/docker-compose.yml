@@ -1,0 +1,16 @@
+version: "3"
+services:
+  simplifiedtechmongodb:
+    image: mongo:latest
+    container_name: "simplifiedtechmongodb"
+    ports:
+      - 27017:27017
+
+  springboot-mongodb:
+    build: .
+    image: springboot-mongodb:1.0
+    container_name: springboot-mongodb
+    ports:
+      - 8081:8081
+    links:
+      - simplifiedtechmongodb

@@ -4,7 +4,8 @@ services:
     image: mongo:latest
     container_name: mongodb
     restart: on-failure
-    hostname: localhost
+    #hostname: localhost
+    hostname: mongodb
     ports:
       - "27017:27017"
     volumes:
@@ -13,9 +14,9 @@ services:
       spring_boot_mongo_db_network:
         aliases:
           - mongodb
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: pass12345
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: pass12345
     healthcheck:
      test: echo 'db.runCommand("ping").ok' | mongo 10.10.10.60:27017/test --quiet
      interval: 30s
@@ -49,7 +50,7 @@ services:
     container_name: mongo-db-crud-micro-service
     restart: on-failure
     ports:
-      - "8080:8080"
+      - "8083:8083"
     depends_on:
       - mongodb
     networks:
