@@ -1,0 +1,90 @@
+{
+  "info": {
+    "_postman_id": "spring-boot-camel",
+    "name": "Apache Camel Routes",
+    "description": "Test collection for Apache Camel routes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Test File Route - XML",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<root>\n  <message>Hello, XML!</message>\n</root>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/direct/start"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test File Route - CSV",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "1,John,Doe\n2,Jane,Smith",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/direct/start"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test External System Route",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "Test Message",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/direct/sendToExternal"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Unsupported File Type",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "Test Content",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/direct/start"
+        }
+      },
+      "response": []
+    }
+  ]
+}
