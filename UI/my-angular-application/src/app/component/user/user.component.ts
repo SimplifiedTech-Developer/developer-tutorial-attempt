@@ -8,10 +8,10 @@ import {User} from '../../model/user';
 })
 export class UserComponent implements OnInit {
   user: User = {
-    "id":890,
-    "name":"Tebatso",
-    "email":"Tebatso191@gmail.com",
-    "mobile":986235865
+    "id": 890,
+    "name": "Tebatso",
+    "email": "Tebatso191@gmail.com",
+    "mobile": 986235865
   }
 
   constructor() {

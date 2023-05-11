@@ -13,8 +13,8 @@ import lombok.ToString;
 
 @Document(collection = "Book")
 public class Book {
-	@Id
-	private int id;
-	private String bookName;
-	private String authorName;
+    @Id
+    private int id;
+    private String bookName;
+    private String authorName;
 }

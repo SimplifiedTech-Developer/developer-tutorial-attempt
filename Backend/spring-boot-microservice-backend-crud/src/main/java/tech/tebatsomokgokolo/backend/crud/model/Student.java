@@ -9,7 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name ="student")
+@Table(name = "student")
 @Data
 @Builder
 @AllArgsConstructor

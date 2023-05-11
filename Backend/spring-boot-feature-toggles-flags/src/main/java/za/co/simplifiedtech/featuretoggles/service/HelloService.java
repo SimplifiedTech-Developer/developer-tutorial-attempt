@@ -9,14 +9,14 @@ import za.co.simplifiedtech.featuretoggles.enums.FeatureToggleFlags;
 @RequiredArgsConstructor
 public class HelloService {
 
-  private final FeatureManager featureManager;
+    private final FeatureManager featureManager;
 
-  public String hello() {
-    if (featureManager.isActive(FeatureToggleFlags.PERSONALISED_GREETING)) {
-      return "Dumela";
-    } else {
-      return "Hello world";
+    public String hello() {
+        if (featureManager.isActive(FeatureToggleFlags.PERSONALISED_GREETING)) {
+            return "Dumela";
+        } else {
+            return "Hello world";
+        }
     }
-  }
 }
 

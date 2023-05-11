@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UserRestCallComponent } from './user-rest-call.component';
+import {UserRestCallComponent} from './user-rest-call.component';
 
 describe('UserRestCallComponent', () => {
   let component: UserRestCallComponent;
@@ -8,9 +8,9 @@ describe('UserRestCallComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserRestCallComponent ]
+      declarations: [UserRestCallComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

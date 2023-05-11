@@ -14,21 +14,21 @@ import java.util.List;
 @RequestMapping("/book")
 public class Application {
 
-	@Autowired
-	private BookRepository repository;
+    @Autowired
+    private BookRepository repository;
 
-	@PostMapping
-	public Book saveBook(@RequestBody Book book){
-		return repository.save(book);
-	}
+    @PostMapping
+    public Book saveBook(@RequestBody Book book) {
+        return repository.save(book);
+    }
 
-	@GetMapping
-	public List<Book> getBooks(){
-		return repository.findAll();
-	}
+    @GetMapping
+    public List<Book> getBooks() {
+        return repository.findAll();
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
 }

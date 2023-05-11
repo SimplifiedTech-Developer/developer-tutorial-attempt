@@ -6,9 +6,9 @@ import {UserComponent} from './component/user/user.component';
 import {ProductComponent} from './component/product/product.component';
 import {FormsModule} from "@angular/forms";
 import {ProductService} from "./service/product.service";
-import { UserRestCallComponent } from './component/user-rest-call/user-rest-call.component';
+import {UserRestCallComponent} from './component/user-rest-call/user-rest-call.component';
 import {HttpClientModule} from "@angular/common/http";
-import { BookComponent } from './component/book/book.component';
+import {BookComponent} from './component/book/book.component';
 
 @NgModule({
   declarations: [
@@ -28,4 +28,5 @@ import { BookComponent } from './component/book/book.component';
   providers: [ProductService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

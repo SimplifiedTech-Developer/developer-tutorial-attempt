@@ -3,14 +3,14 @@ package za.co.simplifiedtech.liskovsubstitutionprinciple.problem;
 public abstract class SocialMedia {
 
     //@support WhatsApp,Facebook,Instagram
-    public abstract  void chatWithFriend();
+    public abstract void chatWithFriend();
 
     //@support Facebook,Instagram
     public abstract void publishPost(Object post);
 
     //@support WhatsApp,Facebook,Instagram
-    public abstract  void sendPhotosAndVideos();
+    public abstract void sendPhotosAndVideos();
 
     //@support WhatsApp,Facebook
-    public abstract  void groupVideoCall(String... users);
+    public abstract void groupVideoCall(String... users);
 }

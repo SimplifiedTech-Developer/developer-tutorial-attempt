@@ -6,7 +6,7 @@ public class NotificationService {
             //write email related logic
             //use JavaMailSenderAPI
         }
-        if(medium.equals("mobile")){
+        if (medium.equals("mobile")) {
             //write logic using twillio API
         }
     }

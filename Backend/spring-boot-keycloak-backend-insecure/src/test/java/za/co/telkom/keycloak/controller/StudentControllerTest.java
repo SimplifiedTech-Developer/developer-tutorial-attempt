@@ -38,8 +38,8 @@ class StudentControllerTest {
         RestAssured.baseURI = baseHost;
     }
 
-     @Test
-     @Order(1)
+    @Test
+    @Order(1)
     void shouldTestCreateStudent_thenSaveResults() {
         String requestJson = buildStudentRequest("Petrus").toString();
 
@@ -63,8 +63,8 @@ class StudentControllerTest {
                 .build();
     }
 
-     @Test
-     @Order(2)
+    @Test
+    @Order(2)
     void shouldTestGetALLStudents_thenSaveResults() {
 
         given()
@@ -97,8 +97,8 @@ class StudentControllerTest {
                 .statusCode(HttpStatus.OK.value());
     }
 
-     @Test
-     @Order(4)
+    @Test
+    @Order(4)
     void shouldTestUpdateStudentById_thenSaveResults() {
         String requestJson = buildStudentRequest("updatedName").toString();
         given()
@@ -116,7 +116,7 @@ class StudentControllerTest {
     }
 
     @Test
-      @Order(5)
+    @Order(5)
     void shouldTestDeleteStudentById_thenSaveResults() {
         given()
                 .contentType(ContentType.JSON)

@@ -1,4 +1,5 @@
 # springboot-mongodb-docker
+
 Deploying Spring Boot and MongoDB as Containers Using Docker and Docker Compose
 
 **Steps & Commands**
@@ -6,11 +7,12 @@ Deploying Spring Boot and MongoDB as Containers Using Docker and Docker Compose
 - [x] pull mongo image from docker hub **`docker pull mongo:latest`**
 - [x] run mongo image **`docker run -d -p 27017:27017 --name simplifiedtechmongodb mongo:latest`**
 - [x] dockerize spring boot application **`docker build -t springboot-mongodb:1.0 .`**
-- [x] run spring boot docker image and link that container to mongo container 
-   **`docker run -p 8080:8080 --name springboot-mongodb --link simplifiedtechmongodb:mongo -d springboot-mongodb:1.0`**
+- [x] run spring boot docker image and link that container to mongo container
+  **`docker run -p 8080:8080 --name springboot-mongodb --link simplifiedtechmongodb:mongo -d springboot-mongodb:1.0`**
 - [x] check docker running containers  **`docker ps`** it should display two container ids
 - [x] check logs of spring boot image **`docker logs springboot-mongodb`**
 - [x] if all good access your api  :tada:
+
 ```bash
 curl --location --request POST 'http://localhost:8080/books' \
 --header 'Content-Type: application/json' \
@@ -20,6 +22,7 @@ curl --location --request POST 'http://localhost:8080/books' \
     "authorName":"Tebatso"
 }'
 ```
+
 - [x] login to mongo terminal to verify records **`docker exec -it simplifiedtechmongodb bash`**
 - type mongo and enter
 - show dbs
@@ -30,6 +33,7 @@ curl --location --request POST 'http://localhost:8080/books' \
 **Use Docker Compose**
 
 - [x] Kill running container:
+
 ```
 docker rm <containerId>
 ```
@@ -52,7 +56,9 @@ services:
     links:
       - simplifiedtechmongodb
 ```
+
 - [x] navigate to resources folder:
+
 ```
 springboot-mongo-docker/src/main/resources and run docker-compose up
 ```

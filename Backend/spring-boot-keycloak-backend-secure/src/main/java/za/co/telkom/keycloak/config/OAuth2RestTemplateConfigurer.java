@@ -13,46 +13,47 @@ import org.springframework.security.oauth2.client.resource.OAuth2ProtectedResour
 /**
  * OAuth2RestTemplateConfigurer is to create a bean of type {@link OAuth2RestTemplate}.
  * <p>
- *   This configurer is run only when following properties are set in application.properties.
+ * This configurer is run only when following properties are set in application.properties.
  * </p>
  *
- *   <code>rest.security.enabled=true</code>
- *   <code>security.oauth2.client.grant-type=client_credentials</code>
- *
+ * <code>rest.security.enabled=true</code>
+ * <code>security.oauth2.client.grant-type=client_credentials</code>
  */
 @Configuration
 @Conditional(value = {OAuth2RestTemplateConfigurer.ServiceAccountEnabled.class})
 public class OAuth2RestTemplateConfigurer {
 
-  private static final Logger LOG = LoggerFactory.getLogger(OAuth2RestTemplateConfigurer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(OAuth2RestTemplateConfigurer.class);
 
-  @Bean
-  public OAuth2RestTemplate oauth2RestTemplate(OAuth2ProtectedResourceDetails details) {
-    OAuth2RestTemplate oAuth2RestTemplate = new OAuth2RestTemplate(details);
+    @Bean
+    public OAuth2RestTemplate oauth2RestTemplate(OAuth2ProtectedResourceDetails details) {
+        OAuth2RestTemplate oAuth2RestTemplate = new OAuth2RestTemplate(details);
 
-    LOG.debug("Begin OAuth2RestTemplate: getAccessToken");
-    /* To validate if required configurations are in place during startup */
-    oAuth2RestTemplate.getAccessToken();
-    LOG.debug("End OAuth2RestTemplate: getAccessToken");
-    return oAuth2RestTemplate;
-  }
-
-  /**
-   * Condition class to configure OAuth2RestTemplate when both security is enabled and
-   * client credentials property is set for secured micro-service
-   * to micro-service call.
-   */
-  static class ServiceAccountEnabled extends AllNestedConditions {
-
-    ServiceAccountEnabled() {
-      super(ConfigurationPhase.PARSE_CONFIGURATION);
+        LOG.debug("Begin OAuth2RestTemplate: getAccessToken");
+        /* To validate if required configurations are in place during startup */
+        oAuth2RestTemplate.getAccessToken();
+        LOG.debug("End OAuth2RestTemplate: getAccessToken");
+        return oAuth2RestTemplate;
     }
 
-    @ConditionalOnProperty(prefix = "rest.security", value = "enabled", havingValue = "true")
-    static class SecurityEnabled {}
+    /**
+     * Condition class to configure OAuth2RestTemplate when both security is enabled and
+     * client credentials property is set for secured micro-service
+     * to micro-service call.
+     */
+    static class ServiceAccountEnabled extends AllNestedConditions {
 
-    @ConditionalOnProperty(prefix = "security.oauth2.client", value = "grant-type", havingValue = "client_credentials")
-    static class ClientCredentialConfigurationExists {}
+        ServiceAccountEnabled() {
+            super(ConfigurationPhase.PARSE_CONFIGURATION);
+        }
 
-  }
+        @ConditionalOnProperty(prefix = "rest.security", value = "enabled", havingValue = "true")
+        static class SecurityEnabled {
+        }
+
+        @ConditionalOnProperty(prefix = "security.oauth2.client", value = "grant-type", havingValue = "client_credentials")
+        static class ClientCredentialConfigurationExists {
+        }
+
+    }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -8,7 +8,8 @@ import {HttpClient} from "@angular/common/http";
 })
 export class UserRestCallComponent implements OnInit {
 
-  constructor(private httpRestClient : HttpClient) { }
+  constructor(private httpRestClient: HttpClient) {
+  }
 
   ngOnInit(): void {
     let response = this.httpRestClient.get("https://jsonplaceholder.typicode.com/users");

@@ -1,6 +1,6 @@
 package za.co.simplifiedtech.liskovsubstitutionprinciple.solution;
 
-public class WhatsApp implements SocialMedia,SocialVideoCallManager {
+public class WhatsApp implements SocialMedia, SocialVideoCallManager {
     public void chatWithFriend() {
 
     }

@@ -8,7 +8,7 @@ public class ShoppingMall {
         this.bankCard = bankCard;
     }
 
-    public void doPurchaseSomething(long amount){
+    public void doPurchaseSomething(long amount) {
         bankCard.doTransaction(amount);
     }
 
