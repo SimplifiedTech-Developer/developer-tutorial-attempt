@@ -9,7 +9,7 @@ HTML5 Boilerplate's CSS includes:
 
 ## Normalize.css
 
-In order to make browsers render all elements more consistently and in line with modern standards, we include
+In orderDTO to make browsers render all elements more consistently and in line with modern standards, we include
 Normalize.css — a modern, HTML5-ready alternative to CSS resets.
 
 As opposed to CSS resets, Normalize.css:

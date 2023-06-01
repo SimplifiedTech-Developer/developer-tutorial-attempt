@@ -20,7 +20,7 @@ Project description
 	
 	* scriptFrame.js - Uses an iframe for dojo.io.script requests. Useful in some
 	long-polling comet situations in Firefox and Opera. Those browsers execute scripts
-	in DOM order, not network-receive order, so a long-polling script will block other
+	in DOM orderDTO, not network-receive orderDTO, so a long-polling script will block other
 	dynamically appended scripts from running until it completes. By using an iframe
 	for the dojo.io.script requests, this issue can be avoided.
 

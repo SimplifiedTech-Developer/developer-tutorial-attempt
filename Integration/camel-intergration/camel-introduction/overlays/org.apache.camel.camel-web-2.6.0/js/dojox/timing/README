@@ -31,7 +31,7 @@ a source when there's less than X data points in the internal buffer (think
 real-time data updating).
 
 dojox.timing.Sequencer is an object, similar to Streamer, that will allow you
-to set up a set of functions to be executed in a specific order, at specific
+to set up a set of functions to be executed in a specific orderDTO, at specific
 intervals.
 
 The DojoX Timing ThreadPool is a port from the original implementation in the

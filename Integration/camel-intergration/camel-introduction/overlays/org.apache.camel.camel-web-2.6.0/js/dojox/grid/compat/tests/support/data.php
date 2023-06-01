@@ -185,7 +185,7 @@
 		$lim = (int)getPostString("limit");
 		$off = (int)getPostString("offset");
 		$limit = ($lim || $off ? " LIMIT $off, $lim" : "");
-		// build order by clause
+		// build orderDTO by clause
 		$desc = (boolean)getPostString("desc");
 		$ob = getOrderBy();
 		$orderby = ($ob ? " ORDER BY `" . $ob . "`" . ($desc ? " DESC" : "") : "");
@@ -315,7 +315,7 @@
 		
 	function find($inFindCol, $inFind='', $inOb='', $inFindFrom=0, $inFindForward=true, $inFullText=true) {
 		global $table;
-		// build order by clause
+		// build orderDTO by clause
 		$desc = (boolean)getPostString("desc");
 		if (!$inOb)
 			$inOb = getOrderBy();

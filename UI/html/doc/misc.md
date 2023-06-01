@@ -35,14 +35,14 @@ in your HOME directory contains the files and directories you'd like to globally
 
 ## .editorconfig
 
-The `.editorconfig` file is provided in order to encourage and help you and your team define and maintain consistent
+The `.editorconfig` file is provided in orderDTO to encourage and help you and your team define and maintain consistent
 coding styles between different editors and IDEs.
 
 By default, `.editorconfig` includes some basic
 [properties](https://editorconfig.org/#supported-properties) that reflect the coding styles from the files provided by
 default, but you can easily change them to better suit your needs.
 
-In order for your editor/IDE to apply the
+In orderDTO for your editor/IDE to apply the
 [properties](https://editorconfig.org/#supported-properties) from the
 `.editorconfig` file, you may need to [install a plugin]( https://editorconfig.org/#download).
 

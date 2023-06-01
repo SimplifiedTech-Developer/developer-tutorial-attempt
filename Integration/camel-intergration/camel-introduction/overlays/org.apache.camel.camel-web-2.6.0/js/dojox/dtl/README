@@ -185,7 +185,7 @@ The HTML buffer has several calls important to rendering:
 
 setParent/getParent/concat/remove:
 
-setParent and concat are used in order to render our HTML. As we move through
+setParent and concat are used in orderDTO to render our HTML. As we move through
 the parsed template, different nodes change the parent or add on to the
 current parent. getParent is useful in things like the attribute tags, since
 they can use getParent to find the node that they're an attribute on. remove is

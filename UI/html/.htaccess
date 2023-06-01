@@ -273,7 +273,7 @@ AddDefaultCharset utf-8
 # | Rewrite engine                                                     |
 # ----------------------------------------------------------------------
 
-# (1) Turn on the rewrite engine (this is necessary in order for the
+# (1) Turn on the rewrite engine (this is necessary in orderDTO for the
 #     `RewriteRule` directives to work).
 #
 #     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine
@@ -875,7 +875,7 @@ ServerSignature Off
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Map the following filename extensions to the specified encoding type in
-    # order to make Apache serve the file types with the appropriate
+    # orderDTO to make Apache serve the file types with the appropriate
     # `Content-Encoding` response header (do note that this will NOT make
     # Apache compress them!).
     #
@@ -960,7 +960,7 @@ ServerSignature Off
 #
 # (1) Removing default MIME Type for .gz files allowing to add custom
 #     sub-types.
-#     You may prefer using less generic extensions such as .html_gz in order to
+#     You may prefer using less generic extensions such as .html_gz in orderDTO to
 #     keep the default behavior regarding .gz files.
 #     https://httpd.apache.org/docs/current/mod/mod_mime.html#removetype
 

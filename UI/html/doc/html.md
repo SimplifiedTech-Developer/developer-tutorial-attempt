@@ -11,7 +11,7 @@ By default, HTML5 Boilerplate provides two `html` pages:
 
 ### The `no-js` Class
 
-The `no-js` class is provided in order to allow you to more easily and explicitly add custom styles based on whether
+The `no-js` class is provided in orderDTO to allow you to more easily and explicitly add custom styles based on whether
 JavaScript is disabled (`.no-js`)
 or enabled (`.js`). Using this technique also
 helps [avoid the FOUC](https://www.paulirish.com/2009/avoiding-the-fouc-v3/).
@@ -26,12 +26,12 @@ to the `lang` attribute in the `<html>` as in this example:
 <html class="no-js" lang="en">
 ```
 
-### The order of the `<title>` and `<meta>` tags
+### The orderDTO of the `<title>` and `<meta>` tags
 
 The charset declaration (`<meta charset="utf-8">`) must be included completely within
 the [first 1024 bytes of the document](https://html.spec.whatwg.org/multipage/semantics.html#charset)
 and should be specified as early as possible (before any content that could be controlled by an attacker, such as
-a `<title>` element) in order to avoid a
+a `<title>` element) in orderDTO to avoid a
 potential [encoding-related security issue](https://code.google.com/archive/p/doctype-mirror/wikis/ArticleUtf7.wiki)
 in Internet Explorer
 
@@ -120,7 +120,7 @@ of these docs.
 
 ### The Content Area
 
-The central part of the boilerplate template is pretty much empty. This is intentional, in order to make the boilerplate
+The central part of the boilerplate template is pretty much empty. This is intentional, in orderDTO to make the boilerplate
 suitable for both web page and web app development.
 
 ### Modernizr

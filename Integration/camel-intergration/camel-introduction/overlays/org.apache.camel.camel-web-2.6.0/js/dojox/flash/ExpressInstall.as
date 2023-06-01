@@ -14,7 +14,7 @@
  *              ExpressInstall.init(); // starts the update
  *          }
  *
- *    NOTE: Your Flash movie must be at least 214px by 137px in order to use ExpressInstall.
+ *    NOTE: Your Flash movie must be at least 214px by 137px in orderDTO to use ExpressInstall.
  *
  */
 

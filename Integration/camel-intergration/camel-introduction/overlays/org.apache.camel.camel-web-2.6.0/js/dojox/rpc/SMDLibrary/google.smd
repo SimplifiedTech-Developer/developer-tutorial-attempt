@@ -60,7 +60,7 @@
 		"videoSearch": {
 			"target": "http://ajax.googleapis.com/ajax/services/search/video",
 			"parameters": [
-				// ordering, set "d" to order by date, "default": by relevance
+				// ordering, set "d" to orderDTO by date, "default": by relevance
 				{ "name": "scoring", "type": "string", "optional": true }
 			]
 		},

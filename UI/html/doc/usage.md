@@ -89,7 +89,7 @@ to [Microsoft's Docs](https://docs.microsoft.com/en-us/previous-versions/windows
 
 ### .editorconfig
 
-The `.editorconfig` file is provided in order to encourage and help you and your team to maintain consistent coding
+The `.editorconfig` file is provided in orderDTO to encourage and help you and your team to maintain consistent coding
 styles between different editors and IDEs.
 [Read more about the `.editorconfig` file](misc.md#editorconfig).
 
